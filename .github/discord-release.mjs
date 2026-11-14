@@ -1,4 +1,4 @@
-// Meldet ein veröffentlichtes NEXUS-Release in Discord (über einen Webhook).
+// Meldet ein veröffentlichtes NEXUS-Release in Discord (über einen Webhook). Die Nachricht ist auf Englisch.
 // Läuft als GitHub Action im öffentlichen Download-Repository (dort unter .github/discord-release.mjs).
 // Das Original mit den Tests liegt im Code-Repository unter scripts/discord-release.mjs; beide Dateien sind gleich.
 // Die Webhook-Adresse ist geheim und kommt nur aus dem GitHub-Secret DISCORD_WEBHOOK_URL.
@@ -17,10 +17,10 @@ export function buildProfile(iconPath = ICON) {
   return { name: BOT_NAME, avatar: `data:image/png;base64,${png.toString("base64")}` };
 }
 
-/** Kurzer Text: alles vor dem Hinweis-/Deinstallations-/Prüfsummen-Teil des Release-Textes. */
+/** Kurzer Text: alles vor dem Hinweis-/Deinstallations-/Prüfsummen-Teil des Release-Textes (englisch oder deutsch). */
 export function shortText(body) {
   const lines = String(body ?? "").replace(/\r/g, "").split("\n");
-  const end = lines.findIndex((l) => /^\s*(Hinweis\s*:|Deinstallieren\s*:|SHA-?256\b)/i.test(l));
+  const end = lines.findIndex((l) => /^\s*(Note\s*:|Uninstall\s*:|Hinweis\s*:|Deinstallieren\s*:|SHA-?256\b)/i.test(l));
   let text = (end === -1 ? lines : lines.slice(0, end))
     .filter((l) => !/^#\s/.test(l)) // Überschrift steht schon im Titel
     .join("\n")
@@ -49,20 +49,20 @@ export function buildPayload(release) {
 
   const links = [];
   if (installer) {
-    links.push(`⬇️ **[Direkt herunterladen (${installer.name})](${installer.browser_download_url})**`);
+    links.push(`⬇️ **[Download (${installer.name})](${installer.browser_download_url})**`);
   }
-  links.push(`📄 [Zur Download-Seite](${release.html_url})`);
+  links.push(`📄 [Release page](${release.html_url})`);
 
   const parts = [];
   if (text) parts.push(text);
   parts.push(links.join("\n"));
   if (installer) {
-    parts.push("-# Der Installer ist nicht signiert. Windows kann warnen: „Weitere Informationen“ → „Trotzdem ausführen“.");
+    parts.push("-# The installer is not signed. Windows may show a warning: “More info” → “Run anyway”.");
   }
 
   return {
     username: BOT_NAME,
-    content: `🚀 **Update ist fertig: NEXUS ${version}**`,
+    content: `🚀 **Update available: NEXUS ${version}**`,
     embeds: [
       {
         title: release.name || `NEXUS ${version}`,
