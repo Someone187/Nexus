@@ -1,37 +1,37 @@
 # NEXUS
 
-NEXUS ist ein kleines Begleit-Programm für League of Legends unter Windows 11.
+NEXUS is a small companion app for League of Legends on Windows 11.
 
-## Was NEXUS kann
+## What NEXUS can do
 
-- **Match automatisch annehmen**, wenn ein Spiel gefunden wurde.
-- **Champion automatisch picken und bannen** nach deinen eigenen Listen, mit Ersatz-Picks, falls dein Champion weg ist.
-- **Profile pro Champion** anlegen und mit einem Klick wechseln.
-- **Dein Profil ansehen:** Stufe, Rang und deine letzten 20 Spiele.
-- **League starten** direkt aus NEXUS.
-- **Mit League öffnen und schließen**, auf Wunsch unsichtbar im Hintergrund.
-- Deine Einstellungen werden über deinen Riot-Account online gespeichert und sind nach einer Neuinstallation wieder da.
-- Deutsch und Englisch.
+- **Accept matches automatically** when a game is found.
+- **Pick and ban champions automatically** from your own lists, with backup picks in case your champion is taken.
+- **One profile per champion**, switch with a single click.
+- **View your profile:** level, rank and your last 20 games.
+- **Start League** directly from NEXUS.
+- **Open and close together with League**, hidden in the background if you like.
+- Your settings are saved online through your Riot account and are back after a reinstall.
+- English and German.
 
-Die automatischen Funktionen sind am Anfang ausgeschaltet. Du schaltest sie selbst in den Einstellungen ein.
+The automatic features are turned off at first. You turn them on yourself in the settings.
 
-## Installieren
+## Install
 
-1. Unter [Releases](https://github.com/Someone187/Nexus/releases/latest) die Datei `NEXUS_…_x64-setup.exe` herunterladen.
-2. Datei öffnen. Windows kann warnen, weil der Installer nicht signiert ist: **Weitere Informationen → Trotzdem ausführen**.
-3. NEXUS über das Startmenü starten.
+1. Download `NEXUS_…_x64-setup.exe` from [Releases](https://github.com/Someone187/Nexus/releases/latest).
+2. Open the file. Windows may show a warning because the installer is not signed: **More info → Run anyway**.
+3. Start NEXUS from the Start menu.
 
-Ein Update installierst du genauso. Deine Daten bleiben erhalten.
+Updates are installed the same way. Your data is kept.
 
-## Deinstallieren
+## Uninstall
 
-Windows-Einstellungen → Apps → Installierte Apps → NEXUS → Deinstallieren.
-Dabei wirst du gefragt, ob auch deine Daten gelöscht werden sollen.
+Windows Settings → Apps → Installed apps → NEXUS → Uninstall.
+You will be asked whether your data should be deleted as well.
 
-## Änderungen
+## Changes
 
-- **0.11.0:** Aufgeräumte Oberfläche, neue Seite „View Profile“, Größe der Oberfläche einstellbar, „League starten“ startet das Spiel komplett.
+- **0.11.0:** Cleaner interface, new “View Profile” page, adjustable interface size, “Start League” now launches the game completely.
 
 ---
 
-NEXUS ist ein Fanprojekt und wird von Riot Games weder unterstützt noch gesponsert. Benutzung auf eigene Verantwortung.
+NEXUS is a fan project and is not endorsed or sponsored by Riot Games. Use at your own risk.

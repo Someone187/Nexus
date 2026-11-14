@@ -1,9 +1,7 @@
-name: Discord-Meldung bei neuem Release
+name: Discord release message
 
-# Sobald ein Release veröffentlicht wird, erscheint im Discord-Server die Nachricht
-# "Update ist fertig" mit Download-Link zum Installer.
-# Einmalig nötig: Settings → Secrets and variables → Actions → Secret
-# DISCORD_WEBHOOK_URL mit der Webhook-Adresse aus Discord anlegen.
+# When a release is published, a message with the download link is posted to the Discord server.
+# Needs the Actions secret DISCORD_WEBHOOK_URL (the Discord webhook address).
 
 on:
   release:
@@ -11,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Zum Testen: Version erneut melden (z. B. v0.11.0). Leer = neuestes Release."
+        description: "For testing: announce a version again (e.g. v0.11.0). Empty = latest release."
         required: false
 
 permissions:
@@ -25,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Nachricht an Discord senden
+      - name: Send message to Discord
         run: node .github/discord-release.mjs
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
