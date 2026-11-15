@@ -30,6 +30,7 @@ You will be asked whether your data should be deleted as well.
 
 ## Changes
 
+- **0.12.4:** Rank history in rank colors, minimap timers for dragon and Baron pit, timers for Voidgrubs and Rift Herald, dragon type symbol, new CS per minute overlay, one on/off switch per overlay.
 - **0.12.3:** Overlays can be resized and made more transparent, new timer overlay for dragon, Baron and enemy summoner spells, installer in English.
 - **0.12.2:** Spotify player and overlay on top of League, auto-update, several active profiles (one per position), rank emblems, rank history, match overview, fix for confirming picks without an active profile.
 - **0.11.0:** Cleaner interface, new “View Profile” page, adjustable interface size, “Start League” now launches the game completely.
